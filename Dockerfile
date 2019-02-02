@@ -10,4 +10,5 @@ RUN yarn run build
 
 # Last Phase
 FROM nginx:stable-alpine
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
